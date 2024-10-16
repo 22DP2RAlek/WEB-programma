@@ -1,113 +1,225 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html> 
 
-<head>
-    <style>
-        
-        a:hover{
-            color: #4e4eeb;
-        }
+<html lang="lv"> 
 
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
+ 
 
-        header {
-            background-color: #333;
-            padding: 10px;
-            text-align: center;
-            border-bottom: 1px solid #ddd;
-            color: white;
-        }
+<head> 
 
-        header h3 {
-            margin: 0;
-        }
+    <meta charset="UTF-8"> 
 
-        nav {
-            background-color: #333;
-            color: white;
-            padding: 10px;
-            text-align: center;
-        }
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-        }
+    <title>Mājaslapas Nosaukums</title> 
 
-        nav a:hover {
-            text-decoration: underline;
-        }
+    <style> 
 
-        main {
-            width: 70%;
-            margin: 20px auto;
-            padding: 20px;
-            border-radius: 8px;
-        }
+ 
 
-        .aside-one {
-            width: 20%;
-            padding: 20px;
-            border-radius: 8px;
-            float: right;
-            margin: 20px;
-        }
-        .aside-two {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            float: right;
-        }
+        body { 
 
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-    </style>
-</head>
+            font-family: Arial, sans-serif; 
 
-<body>
-    <header>
-        <h3>Mājaslapas Nosaukums</h3>
-        <a:hover>
-        <nav>
-            <a href="url">Home</a>
-            <a href="url">About</a>
-            <a href="url">Contact</a>
-        
-        </nav>
-    </a:hover>
-        <nav>
-            <aside class="aside-two">
-                <a href="Login.html">Log In</a>
-            </aside>
-        </nav>
-    </header>
-    <main>
-        <h2>Kaķi</h2>
-        <p>Mājas kaķis jeb kaķis (Felis silvestris catus), arī domesticētais kaķis ir mazs, plēsīgs kaķu dzimtas
-            zīdītājs, kas pieradināts pirms vairāk nekā 9500 gadiem</p>
-        <img src="C:\Users\ra00007\Downloads\kakis.jfif" alt="Kakis">
-    </main>
-    <aside class="aside-one">
-        <h1>Vairāk par kaķiem:</h1>
-        <p>Kaķis ir ļoti populārs mājdzīvnieks, jo palīdz cilvēkam cīnīties ar dažādiem kaitēkļiem, piemēram, pelēm,
-            čūskām un pat skorpioniem.</p>
-    </aside>
-    <footer>
-        <p>Informācija ņemta no: <a href="https://lv.wikipedia.org/wiki/Ka%C4%B7is" target="_blank"
-                style="color: white; text-decoration: underline;">https://lv.wikipedia.org/wiki/Ka%C4%B7is</a></p>
-    </footer>
-</body>
+            margin: 0; 
 
-</html>
+            padding: 0; 
+
+            background-color: #f5f5f5; 
+
+        } 
+
+ 
+
+        nav { 
+
+            background-color: #333; 
+
+            display: flex; 
+
+            justify-content: space-around; 
+
+            align-items: center; 
+
+            padding: 15px; 
+
+        } 
+
+ 
+
+        nav a { 
+
+            color: white; 
+
+            text-decoration: none; 
+
+            font-size: 18px; 
+
+            padding: 10px 15px; 
+
+            transition: background-color 0.3s, color 0.3s; 
+
+        } 
+
+ 
+
+        nav a:hover { 
+
+            background-color: #4e4eeb; 
+
+            color: white; 
+
+            border-radius: 5px; 
+
+        } 
+
+ 
+
+        main { 
+
+            width: 70%; 
+
+            margin: 20px auto; 
+
+            padding: 20px; 
+
+            border-radius: 8px; 
+
+            background-color: white; 
+
+        } 
+
+ 
+
+        .aside-one { 
+
+            width: 20%; 
+
+            padding: 20px; 
+
+            border-radius: 8px; 
+
+            float: right; 
+
+            margin: 20px; 
+
+            background-color: #eee; 
+
+        } 
+
+ 
+
+        footer { 
+
+            background-color: #333; 
+
+            color: white; 
+
+            text-align: center; 
+
+            padding: 10px; 
+
+            position: fixed; 
+
+            width: 100%; 
+
+            bottom: 0; 
+
+        } 
+
+ 
+
+     
+
+        @media (max-width: 768px) { 
+
+            nav { 
+
+                flex-direction: column; 
+
+                text-align: center; 
+
+            } 
+
+ 
+
+            main { 
+
+                width: 90%; 
+
+            } 
+
+        } 
+
+    </style> 
+
+</head> 
+
+ 
+
+<body> 
+
+ 
+
+ 
+
+    <nav> 
+
+        <a href="index.html">Sākums</a> 
+
+        <a href="#">Par mums</a> 
+
+        <a href="#">Kontakti</a> 
+
+        <a href="card.html">Kartiņas</a> 
+
+    </nav> 
+
+ 
+
+    <header> 
+
+        <h3>Ceļojumu Aģentūra</h3> 
+
+    </header> 
+
+ 
+
+    <main> 
+
+        <h2>Kaķi</h2> 
+
+        <p>Mājas kaķis jeb kaķis (Felis silvestris catus), arī domesticētais kaķis, ir mazs, plēsīgs kaķu dzimtas 
+
+            zīdītājs, kas pieradināts pirms vairāk nekā 9500 gadiem.</p> 
+
+        <img src="C:\Users\ra00007\Downloads\kakis.jfif" alt="Kakis" style="width: 100%; height: auto;"> 
+
+ 
+
+        <aside class="aside-one"> 
+
+            <h1>Vairāk par kaķiem:</h1> 
+
+            <p>Kaķis ir ļoti populārs mājdzīvnieks, jo palīdz cilvēkam cīnīties ar dažādiem kaitēkļiem, piemēram, 
+
+                pelēm, čūskām un pat skorpioniem.</p> 
+
+        </aside> 
+
+    </main> 
+
+ 
+
+    <footer> 
+
+        <p></p> 
+
+    </footer> 
+
+ 
+
+</body> 
+
+ 
+
+</html> 

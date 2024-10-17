@@ -66,8 +66,113 @@
             position: fixed; 
             width: 100%; 
             bottom: 0; 
-        }      
+        }
+        
+        a {
+  color: #fff;
+  text-decoration: none;
+}
 
+.p-menu1{
+   height: 100%;
+}
+
+
+
+    @media  (max-width: 768px) {
+
+    
+        /* Hamburger */
+        .hamburger1 {
+        height: 45px;
+        margin: 10px;
+        display: -ms-grid;
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        justify-items: center;
+        z-index: 120;
+        }
+
+        .hamburger1 div {
+        background-color: white;
+        position: left;
+        width: 40px;
+        height: 5px;
+        margin-top: 7px;
+        -webkit-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+        }
+
+        #toggle1 {
+        display: none;
+        }
+
+        #toggle1:checked + .hamburger1 .top {
+        -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+        margin-top: 22.5px;
+        }
+
+        #toggle1:checked + .hamburger1 .meat {
+        -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
+        margin-top: -5px;
+        }
+
+        #toggle1:checked + .hamburger1 .bottom {
+        -webkit-transform: scale(0);
+                transform: scale(0);
+        }
+
+        #toggle1:checked ~ .menu1 {
+        height: 340px;
+        }
+
+
+        /* Menu */
+        .menu1 {
+        width: 100%;
+        background-color: #333; 
+        margin: 0;
+        display: -ms-grid;
+        display: grid;
+        grid-template-rows: 1fr repeat(4, 0.5fr);
+        grid-row-gap: 25px;
+        padding: 0;
+        list-style: none;
+        clear: both;
+        width: auto;
+        text-align: center;
+        height: 0px;
+        overflow: hidden;
+        transition: height .4s ease;
+        z-index: 120;
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        }
+
+        .menu1 a:first-child {
+        margin-top: 40px;
+        }
+
+        .menu1 a:last-child {
+        margin-bottom: 40px;
+        }
+
+        .link1 {
+        width: 100%;
+        margin: 0;
+        padding: 10px 0;
+        font: 700 20px 'Oswald', sans-serif;
+        }
+
+        .link1:hover {
+        background-color: #fff;
+        color: rgb(61, 61, 61);
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        }
+    }
         @media (max-width: 768px) { 
             nav { 
                 flex-direction: column; 
@@ -75,24 +180,38 @@
             } 
 
             main { 
-                width: 90%; 
+                position: center;
             } 
             
             footer {
+                align-items: center;
                 position: center;
             }
+
         } 
+        
     </style> 
 </head> 
 
 <body> 
 
-    <nav> 
-        <a href="index.html">Sākums</a> 
-        <a href="#">Par mums</a> 
-        <a href="#">Kontakti</a> 
-        <a href="card.html">Kartiņas</a> 
-    </nav> 
+    <section class="p-menu1">
+        <nav id="navbar" class="navigation" role="navigation">
+            <input id="toggle1" type="checkbox" />
+            <label class="hamburger1" for="toggle1">
+            <div class="top"></div>
+            <div class="meat"></div>
+            <div class="bottom"></div>
+            </label>
+                
+            <nav class="menu1">
+                <a href="index.html">Sākums</a> 
+                <a href="#">Par mums</a> 
+                <a href="#">Kontakti</a> 
+                <a href="card.html">Kartiņas</a> 
+            </nav>
+      </nav>
+    </section>
 
     <header> 
         <h3>Ceļojumu Aģentūra</h3 > 
@@ -102,18 +221,11 @@
         <h2>Ceļojums</h2> 
         <p>Palīdzēsim tev plānot savu ceļojumu pa Latviju.</p> 
 
-        <img src="https://hips.hearstapps.com/hmg-prod/images/champagne-beach-espiritu-santo-island-vanuatu-royalty-free-image-1655672510.jpg?
-        crop=0.668xw:1.00xh;0.167xw,0&resize=640:*" alt="Bilde" height="90%"> 
-
-        <aside class="aside-one"> 
-            <h1>Vairāk par mums</h1> 
-            <p>Mēs tev palīdzēsim izplānot ceļojumu pa Latviju vai ieteiksim tev vietas, kuras apskatīt.</p> 
-        </aside> 
+        <img src="https://www.landofexperiences.gr/wp-content/uploads/2016/11/banner_gouves_beach-200x200.jpg" alt="Bilde" height="90%"> 
 
     </main> 
     <footer> 
-
-        <p>Kontakti - +371 21345678</p> 
+        <p>Kontakti +371 21345678</p> 
     </footer> 
 </body> 
 

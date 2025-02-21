@@ -7,7 +7,6 @@
 <head> 
     <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-
     <title>Mājaslapas Nosaukums</title> 
 
     <style> 
@@ -33,8 +32,6 @@
             font-size: 18px; 
             padding: 10px 15px; 
             transition: background-color 0.3s, color 0.3s; 
-            position: center;
-            align-items: center;
         } 
 
         nav a:hover { 
@@ -75,112 +72,98 @@
         a {
             color: #fff;
             text-decoration: none;
-            position: center;
+            display: inline-block; /* Changed from "position: center;" */
+            text-align: center; /* Center the text */
         }
 
         .p-menu1{
             height: 100%;
         }
+
         .menu1 {
-            position: center;
+            text-align: center; /* Properly centering the menu */
         }
-        .navbar
 
-
-
+        /* Hamburger Menu */
         @media (max-width: 768px) {
+            .hamburger1 {
+                height: 45px;
+                margin: 10px;
+                display: grid;
+                grid-template-rows: repeat(3, 1fr);
+                justify-items: center;
+                z-index: 120;
+            }
 
-/* Hamburger */
-.hamburger1 {
-    height: 45px;
-    margin: 10px;
-    display: grid; /* Remove -ms-grid */
-    grid-template-rows: repeat(3, 1fr);
-    justify-items: center;
-    z-index: 120;
-}
+            .hamburger1 div {
+                background-color: white;
+                position: relative; /* Changed from "left" */
+                width: 40px;
+                height: 5px;
+                margin-top: 7px;
+                transition: all 0.2s ease-in-out;
+            }
 
-        .hamburger1 div {
-        background-color: white;
-        position: left;
-        width: 40px;
-        height: 5px;
-        margin-top: 7px;
-        -webkit-transition: all 0.2s ease-in-out;
-        transition: all 0.2s ease-in-out;
-        }
+            #toggle1 {
+                display: none;
+            }
 
-        #toggle1 {
-        display: none;
-        }
-
-        #toggle1:checked + .hamburger1 .top {
-        -webkit-transform: rotate(-45deg);
+            #toggle1:checked + .hamburger1 .top {
                 transform: rotate(-45deg);
-        margin-top: 22.5px;
-        }
+                margin-top: 22.5px;
+            }
 
-        #toggle1:checked + .hamburger1 .meat {
-        -webkit-transform: rotate(45deg);
+            #toggle1:checked + .hamburger1 .meat {
                 transform: rotate(45deg);
-        margin-top: -5px;
-        }
+                margin-top: -5px;
+            }
 
-        #toggle1:checked + .hamburger1 .bottom {
-        -webkit-transform: scale(0);
+            #toggle1:checked + .hamburger1 .bottom {
                 transform: scale(0);
+            }
+
+            #toggle1:checked ~ .menu1 {
+                height: 340px;
+            }
+
+            .menu1 {
+                width: 100%;
+                background-color: #333; 
+                margin: 0;
+                display: grid;
+                grid-template-rows: 1fr repeat(4, 0.5fr);
+                grid-row-gap: 25px;
+                padding: 0;
+                list-style: none;
+                height: 0;
+                overflow: hidden;
+                transition: height 0.4s ease;
+                z-index: 120;
+            }
+
+            .menu1 a:first-child {
+                margin-top: 40px;
+            }
+
+            .menu1 a:last-child {
+                margin-bottom: 40px;
+            }
+
+            .link1 {
+                width: 100%;
+                margin: 0;
+                padding: 10px 0;
+                font: 700 20px 'Oswald', sans-serif;
+            }
+
+            .link1:hover {
+                background-color: #fff;
+                color: rgb(61, 61, 61);
+                transition: all 0.3s ease;
+            }
         }
 
-        #toggle1:checked ~ .menu1 {
-        height: 340px;
-        }
-
-
-
-        /* Menu */
-        .menu1 {
-        width: 100%;
-        background-color: #333; 
-        margin: 0;
-        display: -ms-grid;
-        display: grid;
-        grid-template-rows: 1fr repeat(4, 0.5fr);
-        grid-row-gap: 25px;
-        padding: 0;
-        list-style: none;
-        clear: both;
-        width: auto;
-        text-align: center;
-        height: 0px;
-        overflow: hidden;
-        transition: height .4s ease;
-        z-index: 120;
-        -webkit-transition: all 0.3s ease;
-        transition: all 0.3s ease;
-        }
-
-        .menu1 a:first-child {
-        margin-top: 40px;
-        }
-
-        .menu1 a:last-child {
-        margin-bottom: 40px;
-        }
-
-        .link1 {
-        width: 100%;
-        margin: 0;
-        padding: 10px 0;
-        font: 700 20px 'Oswald', sans-serif;
-        }
-
-        .link1:hover {
-        background-color: #fff;
-        color: rgb(61, 61, 61);
-        -webkit-transition: all 0.3s ease;
-        transition: all 0.3s ease;
-        }
-    }
+        /* Mobile adjustments for nav and footer */
         @media (max-width: 768px) { 
             nav { 
                 flex-direction: column; 
@@ -188,18 +171,17 @@
             } 
 
             main { 
-                position: center;
+                text-align: center; /* Center the main content */
             } 
-            
-            footer {
-                align-items: center;
-                position: center;
-            }
 
-        } 
-        
+            footer {
+                text-align: center;
+            }
+        }
+
     </style> 
-</head> 
+</head>
+
 
 <body> 
 
